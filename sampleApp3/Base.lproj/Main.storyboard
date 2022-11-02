@@ -41,10 +41,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LaK-Lu-AVh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="63"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="63" id="x2V-Gn-EUa"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="LaK-Lu-AVh" firstAttribute="leading" secondItem="baK-do-Lbo" secondAttribute="leading" id="G2K-fB-gAB"/>
                                                 <constraint firstItem="5nM-B9-RvH" firstAttribute="top" secondItem="baK-do-Lbo" secondAttribute="top" constant="10" id="LgH-SE-Tal"/>
+                                                <constraint firstItem="LaK-Lu-AVh" firstAttribute="centerX" secondItem="5nM-B9-RvH" secondAttribute="centerX" id="bFT-37-SHx"/>
                                                 <constraint firstItem="5nM-B9-RvH" firstAttribute="centerX" secondItem="baK-do-Lbo" secondAttribute="centerX" id="cN7-pd-gie"/>
+                                                <constraint firstItem="LaK-Lu-AVh" firstAttribute="top" secondItem="baK-do-Lbo" secondAttribute="top" id="cwH-0O-pd4"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
