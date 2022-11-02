@@ -15,15 +15,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             let layout = UICollectionViewFlowLayout()
             
             //各セルのサイズ
-            layout.itemSize = CGSize(width: 170, height: 170)
+            layout.itemSize = CGSize(width: 190, height: 190)
             
             //行間
-            layout.minimumLineSpacing = 5.0
+            layout.minimumLineSpacing = 0
             //列間
-            layout.minimumInteritemSpacing = 5.0
+            layout.minimumInteritemSpacing = 0
             
-            //セクションごとのInsetを指定
-            layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
+            //セクションごとのInsetを指定/16
+            layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
                     collectionView.collectionViewLayout = layout
             
         }
@@ -41,10 +41,10 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-            cell.backgroundColor = UIColor.lightGray
-        //cellを二分割する
-        cell.layer.cornerRadius = cell.frame.size.width * 0.5
-        cell.clipsToBounds = true
+//            cell.backgroundColor = UIColor.lightGray
+        //cellを二分割する、丸角になる
+//        cell.layer.cornerRadius = cell.frame.size.width * 0.5
+//        cell.clipsToBounds = true
         
         //セル上のTag(1)とつけたUILabelを生成
         let label = cell.contentView.viewWithTag(1) as! UILabel
