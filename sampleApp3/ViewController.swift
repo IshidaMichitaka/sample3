@@ -45,7 +45,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return pokemoninfroarray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,22 +55,17 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         //セル上のTag(1)とつけたUILabelを生成
         let idLabel = cell.contentView.viewWithTag(1) as! UILabel
         
-        print("一番最後！")
-        print(pokemoninfroarray)
+        //セル上のTag(2)とつけたUILabelを生成
+        let nameLabel = cell.contentView.viewWithTag(2) as! UILabel
         
-        idLabel.text = "No.\(String(describing: pokemoninfroarray[indexPath.row].id))"
-        //セルタグ2のラベル
-//        let nameLabel = cell.contentView.viewWithTag(2) as! UILabel
+        //名前のラベル
+        idLabel.text = "No.\(String(describing: pokemoninfroarray[indexPath.row].id!))"
         
-//        セルのラベルにNoを記入
-        //ここでエラー
-//        idLabel.text = "No.\(APIRequest.idList[indexPath.row])"
-
-        //ポケモンの名前を表示
-//        nameLabel.text = "\(APIRequest.nameList[indexPath.row])"
+        //セルのラベル
+        nameLabel.text = String(describing: pokemoninfroarray[indexPath.row].name!)
         
         //作成したURLを元にimageを表示
-            return czell
+            return cell
     }
 }
 
