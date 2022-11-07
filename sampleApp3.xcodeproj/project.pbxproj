@@ -16,6 +16,8 @@
 		62DAD43B2911114600824DA1 /* sampleApp3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD43A2911114600824DA1 /* sampleApp3Tests.swift */; };
 		62DAD4452911114600824DA1 /* sampleApp3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4442911114600824DA1 /* sampleApp3UITests.swift */; };
 		62DAD4472911114600824DA1 /* sampleApp3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4462911114600824DA1 /* sampleApp3UITestsLaunchTests.swift */; };
+		62DAD4542912584000824DA1 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4532912584000824DA1 /* PokemonView.swift */; };
+		62DAD456291349C000824DA1 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD455291349C000824DA1 /* PokemonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		62DAD4402911114600824DA1 /* sampleApp3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleApp3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DAD4442911114600824DA1 /* sampleApp3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleApp3UITests.swift; sourceTree = "<group>"; };
 		62DAD4462911114600824DA1 /* sampleApp3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleApp3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		62DAD4532912584000824DA1 /* PokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonView.swift; sourceTree = "<group>"; };
+		62DAD455291349C000824DA1 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				62DAD4232911114500824DA1 /* AppDelegate.swift */,
 				62DAD4252911114500824DA1 /* SceneDelegate.swift */,
 				62DAD4272911114500824DA1 /* ViewController.swift */,
+				62DAD4532912584000824DA1 /* PokemonView.swift */,
+				62DAD455291349C000824DA1 /* PokemonViewController.swift */,
 				62DAD4292911114500824DA1 /* Main.storyboard */,
 				62DAD42C2911114600824DA1 /* Assets.xcassets */,
 				62DAD42E2911114600824DA1 /* LaunchScreen.storyboard */,
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62DAD4542912584000824DA1 /* PokemonView.swift in Sources */,
+				62DAD456291349C000824DA1 /* PokemonViewController.swift in Sources */,
 				62DAD4282911114500824DA1 /* ViewController.swift in Sources */,
 				62DAD4242911114500824DA1 /* AppDelegate.swift in Sources */,
 				62DAD4262911114500824DA1 /* SceneDelegate.swift in Sources */,

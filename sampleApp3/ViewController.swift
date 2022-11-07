@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
+    var APIRequest = API()
+    var pokemoninfroarray = [PokemonInfo]()
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -32,28 +34,45 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        APIRequest.CreatePokemonLibrary { InfoArray in
+            DispatchQueue.main.async {
+                //ここまで入った!!
+                self.pokemoninfroarray = InfoArray
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 151
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-//            cell.backgroundColor = UIColor.lightGray
-        //cellを二分割する、丸角になる
-//        cell.layer.cornerRadius = cell.frame.size.width * 0.5
-//        cell.clipsToBounds = true
         
         //セル上のTag(1)とつけたUILabelを生成
-        let label = cell.contentView.viewWithTag(1) as! UILabel
+        let idLabel = cell.contentView.viewWithTag(1) as! UILabel
         
-        //今回は簡易的にセルの番号をラベルのテキストに反映させる
-        label.text = "No.\(String(indexPath.row + 1))"
+        print("一番最後！")
+        print(pokemoninfroarray)
         
-            return cell
-    }
+        idLabel.text = "No.\(String(describing: pokemoninfroarray[indexPath.row].id))"
+        //セルタグ2のラベル
+//        let nameLabel = cell.contentView.viewWithTag(2) as! UILabel
+        
+//        セルのラベルにNoを記入
+        //ここでエラー
+//        idLabel.text = "No.\(APIRequest.idList[indexPath.row])"
 
+        //ポケモンの名前を表示
+//        nameLabel.text = "\(APIRequest.nameList[indexPath.row])"
+        
+        //作成したURLを元にimageを表示
+            return czell
+    }
 }
+
+
 
