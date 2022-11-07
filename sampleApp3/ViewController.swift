@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Foundation
+import SDWebImage
 
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -18,7 +20,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             
             //各セルのサイズ
             layout.itemSize = CGSize(width: 190, height: 190)
-            
             //行間
             layout.minimumLineSpacing = 0
             //列間
@@ -36,8 +37,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         super.viewDidLoad()
         
         APIRequest.CreatePokemonLibrary { InfoArray in
+            //APIRequestの処理が終了次第、viewControllerのviewに入れる。
             DispatchQueue.main.async {
-                //ここまで入った!!
                 self.pokemoninfroarray = InfoArray
                 self.collectionView.reloadData()
             }
@@ -64,8 +65,24 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         //セルのラベル
         nameLabel.text = String(describing: pokemoninfroarray[indexPath.row].name!)
         
+        //imageを定義
+        let imageView = cell.contentView.viewWithTag(3) as! UIImageView
+        
+        //imageURLを作成する
+        let imageURL = URL(string: pokemoninfroarray[indexPath.row].sprites.frontImage)
+        imageView.sd_setImage(with: imageURL)
+        
+        //最前面に配置する
+        self.view.bringSubviewToFront(imageView)
+        
         //作成したURLを元にimageを表示
             return cell
+    }
+    
+    //各セルがタップされたときの処理
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let view:UIView = UINib(nibName: "PokemondetailView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
+        self.view.addSubview(view)
     }
 }
 

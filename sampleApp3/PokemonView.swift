@@ -17,8 +17,9 @@ class API {
     var shinyImage:[URL] = []
     
     //151回繰り返す
+    //APIRequest
     func CreatePokemonLibrary(completion: @escaping (_ InfoArray: [PokemonInfo]) -> Void) {
-            for i in 1...151 {
+            for i in 1...4 {
                 let url: URL = URL(string: "https://pokeapi.co/api/v2/pokemon/\(i)")!
 
                 //リクエストを作成
@@ -42,6 +43,7 @@ class API {
                         
                         var pokemonInfo1 = PokemonInfo(name: json.name, id: json.id, sprites: json.sprites)
                         
+                        
                         //個別に配列に格納
                         //id,name
                         self.pokemonInfoArray.append(pokemonInfo1)
@@ -52,11 +54,6 @@ class API {
                             })
                             completion(self.pokemonInfoArray)
                         }
-                                            
-                        //StringからURLにキャスト、URL型で格納
-    //                    self.frontImage.append(URL(string: json.sprites.frontImage)!)
-    //                    self.shinyImage.append(URL(string: json.sprites.shinyImage)!)
-
                     } catch {
                         print("エラー")
                     }
@@ -64,8 +61,6 @@ class API {
                 task.resume()
 
             }
-        
-
     }
     
     
@@ -74,7 +69,6 @@ struct PokemonInfo: Codable {
     let name: String?
     let id: Int?
     let sprites:Images
-    
 }
 
 struct Images: Codable {
