@@ -19,7 +19,7 @@ class API {
     //151回繰り返す
     //APIRequest
     func CreatePokemonLibrary(completion: @escaping (_ InfoArray: [PokemonInfo]) -> Void) {
-            for i in 1...4 {
+            for i in 1...151 {
                 let url: URL = URL(string: "https://pokeapi.co/api/v2/pokemon/\(i)")!
 
                 //リクエストを作成
@@ -41,14 +41,13 @@ class API {
                         //受け取ったJSONデータを解析
                         let json = try decoder.decode(PokemonInfo.self, from: data!)
                         
-                        var pokemonInfo1 = PokemonInfo(name: json.name, id: json.id, sprites: json.sprites)
+                        let pokemonInfo1 = PokemonInfo(name: json.name, id: json.id, sprites: json.sprites)
                         
                         
                         //個別に配列に格納
-                        //id,name
                         self.pokemonInfoArray.append(pokemonInfo1)
                         
-                        if self.pokemonInfoArray.count > 3 {
+                        if self.pokemonInfoArray.count >= 151 {
                             self.pokemonInfoArray.sort(by: {
                                 $0.id! < $1.id!
                             })

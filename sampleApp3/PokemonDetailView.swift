@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SampleViewController: UIViewController {
+class PokemonDetailView: UIViewController {
 
     
     @IBOutlet weak var idLabel: UILabel!

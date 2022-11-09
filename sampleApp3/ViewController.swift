@@ -21,14 +21,12 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
+            
             let layout = UICollectionViewFlowLayout()
             
             //cellの初期値のサイズを記入 autolayoutで上書きされる予定
-            layout.estimatedItemSize = CGSize(width: 20, height: 20)
+            layout.itemSize = CGSize(width: self.collectionView.frame.width/2, height: self.collectionView.frame.width/2)
             
-            //各セルのサイズ
-            //            layout.itemSize = CGSize(width: collectionView.frame.width / 2, height: collectionView.frame.height / 4)
-//            layout.itemSize = CGSize(width: 150, height: 150)
             
             //行間
             layout.minimumLineSpacing = 0
@@ -36,9 +34,8 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
             layout.minimumInteritemSpacing = 0
             
             //セクションごとのInsetを指定/16
-            layout.sectionInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
+            layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
             collectionView.collectionViewLayout = layout
-            
         }
         
     }
@@ -60,20 +57,38 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // 横方向のスペース調整
-        let horizontalSpace:CGFloat = 2
-        let cellSize:CGFloat = self.view.bounds.width/2 - horizontalSpace
-        // 正方形で返すためにwidth,heightを同じにする
-        return CGSize(width: cellSize, height: cellSize)
+        let width: CGFloat = self.collectionView.frame.size.width / 2
+                let height = width
+                return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pokemoninfroarray.count
     }
     
+    
+    // 水平方向におけるセル間のマージン
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            // セルの左右に
+            return 0
+        }
+        
+    // 垂直方向におけるセル間のマージン
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            // セルの中央に
+            return 10
+        }
+    
+    //ここまでにサイズの決定をしておく
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        
+        //monsterview
+        let ballView = cell.contentView.viewWithTag(4) as! UIImageView
+        ballView.image = UIImage(named: "MonsterBall")
+        ballView.sizeToFit()
         
         //セル上のTag(1)とつけたUILabelを生成
         let idLabel = cell.contentView.viewWithTag(1) as! UILabel
@@ -94,10 +109,6 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         let imageURL = URL(string: pokemoninfroarray[indexPath.row].sprites.frontImage)
         imageView.sd_setImage(with: imageURL)
         
-        //monsterview
-        let ballView = cell.contentView.viewWithTag(4) as! UIImageView
-        ballView.sizeToFit()
-        
         //最前面に配置する
         self.view.bringSubviewToFront(imageView)
         
@@ -107,8 +118,6 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     
     //各セルがタップされたときの処理
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        let pokemondetailView: UIView = UINib(nibName: "CustomView", bundle: nil).instantiate(withOwner: self, options: nil).first as! UIView
-        //                self.view.addSubview(pokemondetailView)
         
         //遷移先に渡す変数にそれぞれ格納
         name = pokemoninfroarray[indexPath.row].name!
@@ -121,7 +130,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toNext") {
-            let subVC: SampleViewController = (segue.destination as? SampleViewController)!
+            let subVC: PokemonDetailView = (segue.destination as? PokemonDetailView)!
             subVC.id = id!
             subVC.name = name!
             subVC.selectedImgURL = image!
