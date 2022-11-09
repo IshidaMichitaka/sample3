@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3D8FCFEC645306C0C8937768 /* Pods_sampleApp3_sampleApp3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7590C1D1D121B15D0970BA3B /* Pods_sampleApp3_sampleApp3UITests.framework */; };
-		620A5F322918DBEE00399AC9 /* SampleTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A5F312918DBEE00399AC9 /* SampleTestViewController.swift */; };
-		620A5F342918E56300399AC9 /* PokemondetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 620A5F332918E56300399AC9 /* PokemondetailView.xib */; };
+		620A5F342918E56300399AC9 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 620A5F332918E56300399AC9 /* CustomView.xib */; };
 		620A5F362918EFEF00399AC9 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A5F352918EFEF00399AC9 /* CustomView.swift */; };
+		62C33F43291A5A2A001AA5D4 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C33F42291A5A2A001AA5D4 /* SampleViewController.swift */; };
+		62C33F45291B3D82001AA5D4 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C33F44291B3D82001AA5D4 /* CustomCell.xib */; };
 		62DAD4242911114500824DA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4232911114500824DA1 /* AppDelegate.swift */; };
 		62DAD4262911114500824DA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4252911114500824DA1 /* SceneDelegate.swift */; };
 		62DAD4282911114500824DA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4272911114500824DA1 /* ViewController.swift */; };
@@ -21,7 +22,6 @@
 		62DAD4452911114600824DA1 /* sampleApp3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4442911114600824DA1 /* sampleApp3UITests.swift */; };
 		62DAD4472911114600824DA1 /* sampleApp3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4462911114600824DA1 /* sampleApp3UITestsLaunchTests.swift */; };
 		62DAD4542912584000824DA1 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4532912584000824DA1 /* PokemonView.swift */; };
-		62DAD456291349C000824DA1 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD455291349C000824DA1 /* PokemonViewController.swift */; };
 		700C205A320E36859AFB9A3C /* Pods_sampleApp3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE19325CE1A8674FE70959BC /* Pods_sampleApp3.framework */; };
 		7C81311B1CE0E470459E5CBB /* Pods_sampleApp3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117DAF40A8768725C11ED555 /* Pods_sampleApp3Tests.framework */; };
 /* End PBXBuildFile section */
@@ -49,9 +49,10 @@
 		1B742ECA2CCB7E014AC2EC39 /* Pods-sampleApp3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleApp3.release.xcconfig"; path = "Target Support Files/Pods-sampleApp3/Pods-sampleApp3.release.xcconfig"; sourceTree = "<group>"; };
 		4DC64B27B09286CD4B619C58 /* Pods-sampleApp3-sampleApp3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleApp3-sampleApp3UITests.debug.xcconfig"; path = "Target Support Files/Pods-sampleApp3-sampleApp3UITests/Pods-sampleApp3-sampleApp3UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		515B26D19F0B2203A1540B2D /* Pods-sampleApp3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleApp3.debug.xcconfig"; path = "Target Support Files/Pods-sampleApp3/Pods-sampleApp3.debug.xcconfig"; sourceTree = "<group>"; };
-		620A5F312918DBEE00399AC9 /* SampleTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTestViewController.swift; sourceTree = "<group>"; };
-		620A5F332918E56300399AC9 /* PokemondetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemondetailView.xib; sourceTree = "<group>"; };
+		620A5F332918E56300399AC9 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		620A5F352918EFEF00399AC9 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		62C33F42291A5A2A001AA5D4 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		62C33F44291B3D82001AA5D4 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		62DAD4202911114500824DA1 /* sampleApp3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleApp3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DAD4232911114500824DA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DAD4252911114500824DA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		62DAD4442911114600824DA1 /* sampleApp3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleApp3UITests.swift; sourceTree = "<group>"; };
 		62DAD4462911114600824DA1 /* sampleApp3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleApp3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		62DAD4532912584000824DA1 /* PokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonView.swift; sourceTree = "<group>"; };
-		62DAD455291349C000824DA1 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 		7590C1D1D121B15D0970BA3B /* Pods_sampleApp3_sampleApp3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sampleApp3_sampleApp3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D8E40E9CE404E275755727 /* Pods-sampleApp3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleApp3Tests.release.xcconfig"; path = "Target Support Files/Pods-sampleApp3Tests/Pods-sampleApp3Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DE19325CE1A8674FE70959BC /* Pods_sampleApp3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sampleApp3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,11 +143,11 @@
 				62DAD4252911114500824DA1 /* SceneDelegate.swift */,
 				62DAD4272911114500824DA1 /* ViewController.swift */,
 				62DAD4532912584000824DA1 /* PokemonView.swift */,
-				62DAD455291349C000824DA1 /* PokemonViewController.swift */,
-				620A5F312918DBEE00399AC9 /* SampleTestViewController.swift */,
 				620A5F352918EFEF00399AC9 /* CustomView.swift */,
-				620A5F332918E56300399AC9 /* PokemondetailView.xib */,
+				62C33F42291A5A2A001AA5D4 /* SampleViewController.swift */,
+				620A5F332918E56300399AC9 /* CustomView.xib */,
 				62DAD4292911114500824DA1 /* Main.storyboard */,
+				62C33F44291B3D82001AA5D4 /* CustomCell.xib */,
 				62DAD42C2911114600824DA1 /* Assets.xcassets */,
 				62DAD42E2911114600824DA1 /* LaunchScreen.storyboard */,
 				62DAD4312911114600824DA1 /* Info.plist */,
@@ -292,8 +292,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62C33F45291B3D82001AA5D4 /* CustomCell.xib in Resources */,
 				62DAD4302911114600824DA1 /* LaunchScreen.storyboard in Resources */,
-				620A5F342918E56300399AC9 /* PokemondetailView.xib in Resources */,
+				620A5F342918E56300399AC9 /* CustomView.xib in Resources */,
 				62DAD42D2911114600824DA1 /* Assets.xcassets in Resources */,
 				62DAD42B2911114500824DA1 /* Main.storyboard in Resources */,
 			);
@@ -441,9 +442,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				62DAD4542912584000824DA1 /* PokemonView.swift in Sources */,
-				62DAD456291349C000824DA1 /* PokemonViewController.swift in Sources */,
-				620A5F322918DBEE00399AC9 /* SampleTestViewController.swift in Sources */,
 				620A5F362918EFEF00399AC9 /* CustomView.swift in Sources */,
+				62C33F43291A5A2A001AA5D4 /* SampleViewController.swift in Sources */,
 				62DAD4282911114500824DA1 /* ViewController.swift in Sources */,
 				62DAD4242911114500824DA1 /* AppDelegate.swift in Sources */,
 				62DAD4262911114500824DA1 /* SceneDelegate.swift in Sources */,
