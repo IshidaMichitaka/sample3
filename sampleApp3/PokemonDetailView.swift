@@ -7,12 +7,12 @@
 
 import UIKit
 
-class PokemonDetailView: UIViewController {
-
+final class PokemonDetailView: UIViewController {
     
-    @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var idLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    
     var name:String = ""
     var selectedImgURL: URL!
     var id:Int = 0
@@ -22,9 +22,13 @@ class PokemonDetailView: UIViewController {
         super.viewDidLoad()
         idLabel.text = "No.\(id)"
         nameLabel.text = name
-        imageView.sd_setImage(with: selectedImgURL)        
+        imageView.sd_setImage(with: selectedImgURL)
     }
+    
+//    func configure(pokemon: PokemonInfo) {
+//        idLabel.text = "No. \(pokemon.id)"
+//        nameLabel.text = pokemon.name
+//        let url = URL(string: pokemon.sprites.frontImage)
+//        imageView.sd_setImage(with: url)
+//    }
 }
-
-//navigationで帰る時
-//navigationViewController.popViewController(animated: true)

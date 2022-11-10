@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144397A2291CDA0E00CE46F7 /* PokemonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144397A1291CDA0E00CE46F7 /* PokemonInfo.swift */; };
 		3D8FCFEC645306C0C8937768 /* Pods_sampleApp3_sampleApp3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7590C1D1D121B15D0970BA3B /* Pods_sampleApp3_sampleApp3UITests.framework */; };
 		62C33F43291A5A2A001AA5D4 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C33F42291A5A2A001AA5D4 /* PokemonDetailView.swift */; };
 		62DAD4242911114500824DA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DAD4232911114500824DA1 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		0371CE6491C07EF38161CC0E /* Pods-sampleApp3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleApp3Tests.debug.xcconfig"; path = "Target Support Files/Pods-sampleApp3Tests/Pods-sampleApp3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		117DAF40A8768725C11ED555 /* Pods_sampleApp3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sampleApp3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		144397A1291CDA0E00CE46F7 /* PokemonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfo.swift; sourceTree = "<group>"; };
 		1B742ECA2CCB7E014AC2EC39 /* Pods-sampleApp3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleApp3.release.xcconfig"; path = "Target Support Files/Pods-sampleApp3/Pods-sampleApp3.release.xcconfig"; sourceTree = "<group>"; };
 		4DC64B27B09286CD4B619C58 /* Pods-sampleApp3-sampleApp3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleApp3-sampleApp3UITests.debug.xcconfig"; path = "Target Support Files/Pods-sampleApp3-sampleApp3UITests/Pods-sampleApp3-sampleApp3UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		515B26D19F0B2203A1540B2D /* Pods-sampleApp3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleApp3.debug.xcconfig"; path = "Target Support Files/Pods-sampleApp3/Pods-sampleApp3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +97,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1443979F291CD9C000CE46F7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				62DAD4532912584000824DA1 /* APIRequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		144397A0291CD9E300CE46F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				144397A1291CDA0E00CE46F7 /* PokemonInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2B79BC587142341147948229 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +153,9 @@
 			children = (
 				62DAD4232911114500824DA1 /* AppDelegate.swift */,
 				62DAD4252911114500824DA1 /* SceneDelegate.swift */,
+				1443979F291CD9C000CE46F7 /* API */,
+				144397A0291CD9E300CE46F7 /* Models */,
 				62DAD4272911114500824DA1 /* ViewController.swift */,
-				62DAD4532912584000824DA1 /* APIRequest.swift */,
 				62C33F42291A5A2A001AA5D4 /* PokemonDetailView.swift */,
 				62DAD4292911114500824DA1 /* Main.storyboard */,
 				62DAD42C2911114600824DA1 /* Assets.xcassets */,
@@ -435,6 +454,7 @@
 				62DAD4282911114500824DA1 /* ViewController.swift in Sources */,
 				62DAD4242911114500824DA1 /* AppDelegate.swift in Sources */,
 				62DAD4262911114500824DA1 /* SceneDelegate.swift in Sources */,
+				144397A2291CDA0E00CE46F7 /* PokemonInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
