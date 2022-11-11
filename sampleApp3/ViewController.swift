@@ -11,6 +11,8 @@ import SDWebImage
 
 class ViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
+    //test commit push できるかどうか
+    
     var APIRequest = API()
     var pokemoninfroarray = [PokemonInfo]()
     
